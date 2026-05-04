@@ -37,6 +37,14 @@
                         "width": 2
                     },
                     {
+                        "id":   "activity",
+                        "type": "autocomplete",
+                        "name": "Activity",
+                        "url": "/activity",
+                        "form": "ActivityForm",
+                        "width": 2
+                    },
+                    {
                         "id":   "location",
                         "type": "autocomplete",
                         "name": "Location",
@@ -72,6 +80,32 @@
                     }
                 ]
             },
+            {
+  "id": "ActivityForm",
+  "title": "Activity",
+  "url": "/activity",
+  "formFieldList": [
+    {
+      "id": "name",
+      "type": "text",
+      "name": "ActivityName",
+      "width": 2,
+      "required": true
+    },
+    {
+      "type": "deleteButton",
+      "name": "Delete"
+    },
+    {
+      "type": "cancelButton",
+      "name": "Cancel"
+    },
+    {
+      "type": "okButton",
+      "name": "Ok"
+    }
+  ]
+},
             {
                 "id": "LocationForm",
                 "title": "Location",
@@ -255,6 +289,16 @@
                         "name": "NewGroup",
                         "icon": "fa-weixin",
                         "color": "orange",
+                        "form": {
+                            "form": "GroupForm"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-weixin",
+                        "color": "wisteria",
+                        "search": true,
+                        "url": "/group",
                         "form": {
                             "form": "GroupForm"
                         }
